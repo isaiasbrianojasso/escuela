@@ -12,9 +12,11 @@ public class Application {
         System.out.println("Los alumnos son...");
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < students.length; i++) {
-            System.out.println(students[i].getName() + "-" + students[i].getCode());
+            System.out.println(" ");
+            System.out.println(
+                    "Name:"+students[i].getName() + "code:" + students[i].getCode());
             System.out.print("Asistio?:");
-            String response = scanner.next("YNyn");
+            String response = scanner.next();
             System.out.println(students[i].getName() + (response.equalsIgnoreCase("Y") ? "Si" : "No"));
         }
 
