@@ -1,12 +1,12 @@
 package learning.java.school.model;
 
-class Student {
+public class Student {
     private String name;
     private String code;
 
-    public Student(String name, String code) {
-        this.name = name;
-        this.code = code;
+    public Student(String name, String code){      //Creacion del contructor
+        this.name=name;
+        this.code=code;
     }
 
     public String getName() {

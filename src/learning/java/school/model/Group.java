@@ -1,43 +1,50 @@
 package learning.java.school.model;
 
-class Group {
+public class Group {
     private Professor professor;
     private int availability;
     private Student[] students;
+    private int enrolled;
 
-    Group(int availability) { //constructor
+    public Group(int availability, Professor professor){
+        this.availability=availability;
+        students= new Student[availability];
+        this.professor=professor;
+        enrolled=0;
+    }
+
+    public Group(int availability) {
         this.availability = availability;
         students = new Student[availability];
+        enrolled=0;
     }
-
-    public Group(int i, Professor professor) {
-
-
-    }
-
 
     public Professor getProfessor() {
         return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
     }
 
     public int getAvailability() {
         return availability;
     }
 
+    public void addStudent(Student student){
+        if(enrolled < availability){
+            students[enrolled] = student;
+            enrolled++;
+        }
+    }
+
+    public void printStudentsList(){
+        for(int i=0; i<enrolled;i++){
+            System.out.println(students[i].getName());
+        }
+    }
+
     public int getEnrolled() {
-        return availability;
-    }
-
-    public Group[] printStudentsList() {
-        return null ;
-    }
-
-    public void addStudent(Student student) {
-
-    }
-
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
-
+        return enrolled;
     }
 }

@@ -1,9 +1,8 @@
 package learning.java.school.model;
 
-import learning.java.school.model.Group;
-import learning.java.school.model.Professor;
-import learning.java.school.model.Student;
-
+//import learning.java.school.model.Group;
+//import learning.java.school.model.Professor;
+//import learning.java.school.model.Student;
 
 import java.io.IOException;
 
@@ -13,13 +12,12 @@ public class Application {
         Group[] groups = prepareOOPGroups();
 
         for (Group group : groups) {
-             System.out.println("Profesor: " + group.getProfessor().getName());
+            System.out.println("Profesor: " + group.getProfessor().getName());
             System.out.println("Cupo: " + group.getAvailability() + ", Inscritos: " + group.getEnrolled());
             System.out.println("Students: ");
             group.printStudentsList();
             System.out.println("---------------------------------------");
         }
-
         groups[1].addStudent(new Student("Caleb", "asd"));
 
     }
@@ -33,7 +31,7 @@ public class Application {
         professorPaco.setName("Paco Torres");
 
         groups[0] = new Group(20);
-        groups[1] = new Group(15, professorIvan);
+        groups[1] = new Group(15,professorIvan);
 
         groups[0].setProfessor(professorPaco);
 
