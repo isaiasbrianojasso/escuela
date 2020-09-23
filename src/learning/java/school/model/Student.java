@@ -1,4 +1,4 @@
-package learning.java.shool;
+package learning.java.school.model;
 
 class Student {
     private String name;
