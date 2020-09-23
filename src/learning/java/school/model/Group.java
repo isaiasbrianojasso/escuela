@@ -5,13 +5,16 @@ class Group {
     private int availability;
     private Student[] students;
 
-    Group(int availability) {
+    Group(int availability) { //constructor
         this.availability = availability;
         students = new Student[availability];
     }
 
-    public Group(int i, Professor professorIvan) {
+    public Group(int i, Professor professor) {
+
+
     }
+
 
     public Professor getProfessor() {
         return professor;
@@ -21,16 +24,20 @@ class Group {
         return availability;
     }
 
-    public String getEnrolled() {
-        return null;
+    public int getEnrolled() {
+        return availability;
     }
 
-    public void printStudentsList() {
+    public Group[] printStudentsList() {
+        return null ;
     }
 
     public void addStudent(Student student) {
+
     }
 
-    public void setProfessor(Professor professorPaco) {
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+
     }
 }

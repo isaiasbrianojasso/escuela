@@ -13,7 +13,7 @@ public class Application {
         Group[] groups = prepareOOPGroups();
 
         for (Group group : groups) {
-            System.out.println("Profesor: " + group.getProfessor().getName());
+             System.out.println("Profesor: " + group.getProfessor().getName());
             System.out.println("Cupo: " + group.getAvailability() + ", Inscritos: " + group.getEnrolled());
             System.out.println("Students: ");
             group.printStudentsList();
